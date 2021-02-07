@@ -1,0 +1,55 @@
+<html>
+    <p id="hello">สวัสดี</p>
+    <p id="hello">สวัสดี2</p>
+
+    <p class="text-style"></p>
+    <p class="text-style"></p>
+    <p class="text-style"></p>
+    <p class="text-style"></p>
+    <p class="text-style"></p>
+
+
+    <button onclick="changeText()">Change Tag</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="changeTextContentAndStyle()">Change by class name</button>
+    <button onclick="changeByQuerySelector()">Change by query selector</button>
+    <button onclick="getIdByQuerySelector()">Get by query selector</button>
+    <!-- Hello -->
+</html>
+<script>
+    const pTag = document.getElementById('hello')
+    const textStyleTag = document.getElementsByClassName('text-style')
+    const querySelector = document.querySelectorAll('#hello,.text-style')
+
+
+    function getIdByQuerySelector(){
+        for(let i = 0 ; i < querySelector.length;i++){
+            console.log('element',querySelector[i].id)
+        }
+    }
+
+    function changeByQuerySelector(){
+        for (let i = 0 ; i < querySelector.length; i++){
+            querySelector[i].innerText = "Text From Query Selector"
+            querySelector[i].style.color = "gray"
+        }
+    }
+
+    function changeTextContentAndStyle(){
+
+        console.log('text style',textStyleTag)
+        for (let i = 0 ; i < textStyleTag.length; i++){
+            textStyleTag[i].innerText = "Text From DOM"
+            textStyleTag[i].style.color = "green"
+        }
+        
+    }
+    function changeText(){
+        pTag.innerText = "Hello world"
+    }
+
+    function changeStyle(){
+        pTag.style.color = "red"
+    }
+
+</script>

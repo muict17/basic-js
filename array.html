@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const arr = new Array("a","b")
+    // const arr2 = []
+
+    const temp = ["a","b","c","d"];
+    for (let i =0; i < temp.length;i++){
+        console.log(temp[i])
+    }
+
+    for (let a in temp){
+        console.log('in',a)
+    }
+
+    for (let a of temp){
+        console.log('of',a)
+    }
+    
+    temp.forEach((el)=>{
+        console.log('el',el)
+    })
+</script>
+</html>
